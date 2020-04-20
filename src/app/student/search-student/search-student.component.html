@@ -2,7 +2,8 @@
     <form #searchdata="ngForm" (ngSubmit)="searchRecord(searchdata)">
         <label>Search Record  :  </label>
         <input type="text" name="Record"  ngModel required #Record ="ngModel">
-        <button class="btn btn-primary"> Search </button>
+        <button class="btn btn-primary m-1"> Search </button>
+        <button class="btn btn-warning  m-1" routerLink="">Back</button>
     </form>
 </div>
 
