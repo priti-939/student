@@ -1,0 +1,30 @@
+<h1 class="text-center" >Student Information</h1>
+
+<div class="container">
+Serach : <input type="text" ngModel="searchRecord">
+  <table class="table table-bordered table-striped table-dark">
+    <tr>
+        <th>Student Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Standred</th>
+        <th>Division</th>
+        <th>Edit</th>
+        <th>Delete</th>
+
+  </tr>
+    <tr *ngFor="let student of student">
+      <td>{{student.StudentId}}</td>
+      <td>{{student.Name}}</td>
+      <td>{{student.Address}}</td>
+      <td>{{student.Standred}}</td>
+      <td>{{student.Division}}</td>
+      <!-- <td><button class="btn btn-primary" (click)="editStu(student.StudentId)">Edit</button></td> -->
+      <td><a routerLink='edit-student/{{student.StudentId}}' >Edit</a></td>
+      <td><button class="btn btn-warning" (click)="deleteStu(student.StudentId)">Delete</button></td>
+    </tr>
+  </table>
+  <a routerLink='add-student'>Add Student</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a routerLink='search-student'>Search Record</a>
+</div>
+

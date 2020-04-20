@@ -1,0 +1,9 @@
+<div class="container">
+    <form #searchdata="ngForm" (ngSubmit)="searchRecord(searchdata)">
+        <label>Search Record  :  </label>
+        <input type="text" name="Record"  ngModel required #Record ="ngModel">
+        <button class="btn btn-primary"> Search </button>
+    </form>
+</div>
+
+
